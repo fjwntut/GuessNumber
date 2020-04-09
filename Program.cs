@@ -28,6 +28,10 @@ namespace GuessNumber
                     Console.WriteLine("(" + i + ")");
                     return i;
                 }
+                else if (input == "m")
+                {
+                    return (rmin + rmax) / 2;
+                }
                 else
                 {
                     try
@@ -36,7 +40,7 @@ namespace GuessNumber
                     }
                     catch (FormatException)
                     {
-                        Console.WriteLine("Sorry, I dont understand. Please enter a integer, 'r' for random integer, or 'quit' to quit the game. ");
+                        Console.WriteLine("Sorry, I dont understand. Please enter a integer, 'm' for mid number, 'r' for random integer, or 'quit' to quit the game. ");
                         int i = getNum(q, rmin, rmax);
                         return i;
                     }
